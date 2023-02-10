@@ -9,7 +9,7 @@ function Counter() {
             
             <HomeButton />
 
-            <h1>Counter: {count}</h1>
+            <h1>Counter: <span data-testid="count">{count}</span></h1>
             <button onClick={() => setCount(count+1)}>Increment</button>
             <button onClick={() => setCount(count-1)}>Decrement</button>
         </div>
