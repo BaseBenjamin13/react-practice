@@ -34,9 +34,13 @@ import Counter from './components/Counter';
         expect(count).toHaveTextContent(0);
     })
     
+    it('should increase count when increment button is clicked', () => {
+        expect(count).toHaveTextContent(0);
+        userEvent.click(increment);
+        expect(count).toHaveTextContent(1);
+    })
     
     // Tests to do:
-        it.todo('should increase count when plus button is clicked')
         it.todo('should decrease count when minus button is clicked')
         it.todo('should not decrease to less than 1')
     
