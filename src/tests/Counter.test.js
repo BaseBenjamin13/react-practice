@@ -24,7 +24,7 @@ let decrement;
         expect(increment).toBeInTheDocument();
         expect(decrement).toBeInTheDocument();
     })
-    
+
     it('should render a counter with value of 0', () => {
         expect(count).toHaveTextContent(0);
     })
@@ -42,6 +42,13 @@ let decrement;
         expect(count).toHaveTextContent(0);
     })
     
+    it('should not decrease to less than 0', () => {
+        expect(count).toHaveTextContent(0);
+        userEvent.click(decrement);
+        expect(count).toHaveTextContent(0);
+    })
+    
+    
     // Tests to do:
-        it.todo('should not decrease to less than 1')
+    // it.todo('should not decrease to less than 1')
     
