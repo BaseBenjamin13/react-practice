@@ -30,10 +30,12 @@ import Counter from './components/Counter';
         expect(increment).toBeInTheDocument();
         expect(decrement).toBeInTheDocument();
     })
+    it('should render a counter with value of 0', () => {
+        expect(count).toHaveTextContent(0);
+    })
     
     
     // Tests to do:
-        it.todo('should render a counter with value of 1')
         it.todo('should increase count when plus button is clicked')
         it.todo('should decrease count when minus button is clicked')
         it.todo('should not decrease to less than 1')
